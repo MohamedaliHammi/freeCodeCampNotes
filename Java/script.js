@@ -58,15 +58,127 @@ console.log(arr);
 */
 
 //* Use Destructuring Assignment to Pass an Object as a Function's Parameters
+/*
 const budget = {
     max : 12.5,
     min: 7,
     
 };
 
-const half = ({min, max}) => (max + min) /2 ;
+const half = ({min, max}) => (max + min) / 2.00 ;
+*/
+
+//* Create Strings using Template Literals
 
 
+/*
+  const result = {
+    success: ["max-length", "no-amd", "prefer-arrow-functions"],
+    failure: ["no-var", "var-on-top", "linebreak"],
+    skipped: ["no-extra-semi", "no-dup-keys"]
+  };
+  function makeList(arr) {
+    // Only change code below this line
+    const failureItems = [];
+    for (let i  = 0 ; i < arr.length ; i++){
+       failureItems.push(`<li class="text-warning">${arr[i]}</li>`);
+    } 
+   
+    // Only change code above this line
+  
+    return failureItems;
+  }
+  
+  const failuresList = makeList(result.failure);
+  */
+
+//* Use class Syntax to Define a Constructor Function 
 
 
+/*
+class Vegetable{
+  constructor (name){
+    this.name = name
+  }
+}
+const carrot = new Vegetable('carrot');
+console.log(carrot.name);
+*/
+//! constructor is a special methode to assign proerties automatecally called when creating an object 
+ /*
+class Car {
+  constructor(model, color, passengers, year){
+    this.model = model;
+    this.color = color;
+    this.passengers = passengers;
+    this.year = year
+  }
+}
 
+let car1 = new Car ('Ford', 'red', 5, 1958);
+let car2 = new Car ('buggati', 'purple', 2, 2021);
+console.log(car1.model);
+*/
+
+//* Use getters and setters to Control Access to an Object 
+
+//! why use getters & setters
+// a way to get get/set the properties of an object
+// secures better data quality
+// does extra things behind the-scene
+//! exampel
+/*
+class Person{
+  constructor(first, last){
+    this.first = first;
+    this.last = last;
+  }
+set first(value){
+  this.firstName = value;
+ };
+set last(value){
+  this.lastName = value;
+
+} 
+get fullName(){
+  return this.firstName + " " + this.lastName;
+}
+
+ };
+let person1 = new Person('naruto', 'shipudan');
+console.log(person1.fullName);
+*/
+//* Use export to Share a Code Block 
+/*
+const multiplication = () => (a * b);
+export {multiplication}; 
+*/
+//! in the other page to import the equation 
+//*import (multiplication) from (file name)
+//* to import all the content in a file to another file we user import * as name from that file expl [ import * as stringFunctions from './string_functions.js' ]
+
+
+//* promises
+/*
+const myPromise = new Promise((resolve, reject) => {
+  if(condition here) {
+    resolve("Promise was fulfilled");
+  } else {
+    reject("Promise was rejected");
+  }
+});
+
+*/
+
+//* then methode is immediatly excuted after the promise is fulfil 
+
+/* makeServerRequest.then(result => {
+  console.log(result);
+});
+*/
+
+//* .catch is the methode ur promise has rejected
+/* makeServerRequest.catch(error => {
+  console.log(error)
+}); 
+*/
